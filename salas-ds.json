@@ -1,0 +1,7 @@
+{
+  "$schema": "https://salas-ds.dev/schema.json",
+  "framework": "angular",
+  "componentsDir": "src/components/ui",
+  "utils": "src/components/ui/utils.ts",
+  "styles": "src/components/ui/styles.css"
+}

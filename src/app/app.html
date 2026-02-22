@@ -1,1 +1,61 @@
-<router-outlet />
+<salas-sidebar-provider>
+  <!-- variant="floating" -->
+  <salas-sidebar>
+    <salas-sidebar-header>Sidebar</salas-sidebar-header>
+    <salas-sidebar-content>
+      <salas-sidebar-group-label>MENU</salas-sidebar-group-label>
+      <ul class="salas-sidebar-menu" role="menu">
+        <li class="salas-sidebar-menu-item">
+          <a
+            class="salas-sidebar-menu-button"
+            routerLink="/"
+            routerLinkActive="salas-sidebar-menu-button--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            title="Home"
+          >
+            <span class="salas-sidebar-menu-icon">
+              <lucide-icon name="home" [size]="20" />
+            </span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="salas-sidebar-menu-item">
+          <a
+            class="salas-sidebar-menu-button"
+            routerLink="/search"
+            routerLinkActive="salas-sidebar-menu-button--active"
+            title="Search"
+          >
+            <span class="salas-sidebar-menu-icon">
+              <lucide-icon name="search" [size]="20" />
+            </span>
+            <span>Search</span>
+          </a>
+        </li>
+        <li class="salas-sidebar-menu-item">
+          <a
+            class="salas-sidebar-menu-button"
+            routerLink="/config"
+            routerLinkActive="salas-sidebar-menu-button--active"
+            title="Configurações"
+          >
+            <span class="salas-sidebar-menu-icon">
+              <lucide-icon name="settings" [size]="20" />
+            </span>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+    </salas-sidebar-content>
+    <salas-sidebar-footer>Footer</salas-sidebar-footer>
+  </salas-sidebar>
+  <salas-sidebar-inset>
+    <header class="app-main-header">
+      <salas-sidebar-trigger />
+      <span class="app-main-title">Salas</span>
+    </header>
+    <div class="app-main-content">
+      <router-outlet />
+    </div>
+  </salas-sidebar-inset>
+</salas-sidebar-provider>

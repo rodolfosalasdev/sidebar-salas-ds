@@ -1,0 +1,187 @@
+/* Salas Design System - Light & Dark theme */
+/* Defina no <html>: data-theme="light" | "dark". Para seguir o sistema: use JS com prefers-color-scheme */
+
+/* ========== Light (default) ========== */
+:root,
+[data-theme="light"] {
+  --salas-primary-50: #eff6ff;
+  --salas-primary-100: #dbeafe;
+  --salas-primary-200: #bfdbfe;
+  --salas-primary-300: #93c5fd;
+  --salas-primary-400: #60a5fa;
+  --salas-primary-500: #3b82f6;
+  --salas-primary-600: #2563eb;
+  --salas-primary-700: #1d4ed8;
+  --salas-primary-800: #1e40af;
+  --salas-primary-900: #1e3a8a;
+  --salas-primary-950: #172554;
+  --salas-success-50: #f0fdf4;
+  --salas-success-100: #dcfce7;
+  --salas-success-500: #22c55e;
+  --salas-success-600: #16a34a;
+  --salas-warning-50: #fffbeb;
+  --salas-warning-100: #fef3c7;
+  --salas-warning-500: #f59e0b;
+  --salas-warning-600: #d97706;
+  --salas-destructive-50: #fef2f2;
+  --salas-destructive-100: #fee2e2;
+  --salas-destructive-500: #ef4444;
+  --salas-destructive-600: #dc2626;
+  --salas-gray-50: #f9fafb;
+  --salas-gray-100: #f3f4f6;
+  --salas-gray-200: #e5e7eb;
+  --salas-gray-300: #d1d5db;
+  --salas-gray-400: #9ca3af;
+  --salas-gray-500: #6b7280;
+  --salas-gray-600: #4b5563;
+  --salas-gray-700: #374151;
+  --salas-gray-800: #1f2937;
+  --salas-gray-900: #111827;
+  --salas-gray-950: #030712;
+  --salas-bg: #ffffff;
+  --salas-bg-elevated: #ffffff;
+  --salas-text: #111827;
+  --salas-text-muted: #6b7280;
+  --salas-font-sans: ui-sans-serif, system-ui, sans-serif;
+  --salas-font-mono: ui-monospace, monospace;
+}
+
+/* ========== Dark (estilo shadcn: preto, branco e cinza) ========== */
+[data-theme="dark"] {
+  --salas-primary-50: #172554;
+  --salas-primary-100: #1e3a8a;
+  --salas-primary-200: #1e40af;
+  --salas-primary-300: #1d4ed8;
+  --salas-primary-400: #2563eb;
+  --salas-primary-500: #3b82f6;
+  --salas-primary-600: #60a5fa;
+  --salas-primary-700: #93c5fd;
+  --salas-primary-800: #bfdbfe;
+  --salas-primary-900: #dbeafe;
+  --salas-primary-950: #eff6ff;
+  --salas-success-500: #22c55e;
+  --salas-success-600: #4ade80;
+  --salas-warning-500: #f59e0b;
+  --salas-warning-600: #fbbf24;
+  --salas-destructive-500: #ef4444;
+  --salas-destructive-600: #f87171;
+  --salas-gray-50: #18181b;
+  --salas-gray-100: #27272a;
+  --salas-gray-200: #3f3f46;
+  --salas-gray-300: #52525b;
+  --salas-gray-400: #71717a;
+  --salas-gray-500: #a1a1aa;
+  --salas-gray-600: #d4d4d8;
+  --salas-gray-700: #e4e4e7;
+  --salas-gray-800: #f4f4f5;
+  --salas-gray-900: #fafafa;
+  --salas-gray-950: #ffffff;
+  --salas-bg: #09090b;
+  --salas-bg-elevated: #18181b;
+  --salas-text: #fafafa;
+  --salas-text-muted: #a1a1aa;
+}
+
+[data-theme="dark"] .salas-autocomplete-dropdown,
+[data-theme="dark"] .salas-autocomplete-no-results,
+[data-theme="dark"] .salas-autocomplete-loading,
+[data-theme="dark"] .salas-datepicker-calendar {
+  background-color: var(--salas-bg-elevated) !important;
+}
+[data-theme="dark"] .salas-input,
+[data-theme="dark"] .salas-select,
+[data-theme="dark"] .salas-autocomplete,
+[data-theme="dark"] .salas-datepicker {
+  background-color: var(--salas-bg) !important;
+  border-color: var(--salas-gray-200);
+  color: var(--salas-text) !important;
+}
+[data-theme="dark"] .salas-input::placeholder,
+[data-theme="dark"] .salas-datepicker { color: var(--salas-text-muted); }
+[data-theme="dark"] .salas-autocomplete { color: var(--salas-text); }
+[data-theme="dark"] .salas-autocomplete::placeholder { color: var(--salas-text-muted); }
+[data-theme="dark"] button.salas-button--default {
+  background-color: #ffffff !important;
+  color: #09090b !important;
+  border: 1px solid #e4e4e7;
+}
+[data-theme="dark"] button.salas-button--default:hover:not(:disabled) {
+  background-color: #e4e4e7 !important;
+}
+[data-theme="dark"] button.salas-button--destructive {
+  background-color: #6a2622 !important;
+  color: #f1867d !important;
+}
+[data-theme="dark"] button.salas-button--destructive:hover:not(:disabled) {
+  background-color: #7e2f2a !important;
+  color: #f1867d !important;
+}
+[data-theme="dark"] button.salas-button--outline {
+  border: 1px solid #3f3f46 !important;
+  background-color: #18181b !important;
+  color: #e4e4e7 !important;
+}
+[data-theme="dark"] button.salas-button--outline:hover:not(:disabled) {
+  background-color: #27272a !important;
+  color: #fafafa !important;
+}
+[data-theme="dark"] button.salas-button--secondary {
+  background-color: #27272a !important;
+  color: #fafafa !important;
+  border: 1px solid #3f3f46;
+}
+[data-theme="dark"] button.salas-button--secondary:hover:not(:disabled) {
+  background-color: #3f3f46 !important;
+  color: #fafafa !important;
+}
+[data-theme="dark"] button.salas-button--ghost {
+  background-color: transparent !important;
+  color: var(--salas-text) !important;
+}
+[data-theme="dark"] button.salas-button--ghost:hover:not(:disabled) {
+  background-color: var(--salas-gray-100) !important;
+}
+[data-theme="dark"] button.salas-button--link {
+  color: var(--salas-text-muted) !important;
+  text-decoration: underline !important;
+}
+[data-theme="dark"] button.salas-button--link:hover:not(:disabled) {
+  color: var(--salas-text) !important;
+}
+[data-theme="dark"] .salas-datepicker-day { color: var(--salas-text); }
+[data-theme="dark"] .salas-datepicker-day--other-month { color: var(--salas-gray-500); }
+[data-theme="dark"] .salas-autocomplete-option { color: var(--salas-text); }
+[data-theme="dark"] .salas-autocomplete-option:hover,
+[data-theme="dark"] .salas-autocomplete-option--highlighted {
+  background-color: var(--salas-gray-200);
+}
+[data-theme="dark"] .salas-autocomplete-option--selected {
+  background-color: var(--salas-primary-600);
+  color: #ffffff;
+}
+[data-theme="dark"] .salas-autocomplete-no-results,
+[data-theme="dark"] .salas-autocomplete-loading { color: var(--salas-text-muted); }
+
+.salas-sidebar,
+.salas-sidebar-provider,
+.salas-sidebar-inset {
+  font-family: var(--salas-font-sans, ui-sans-serif, system-ui, sans-serif);
+}
+
+/* ========== Layout global (sidebar e app) ========== */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+html, body { height: 100%; margin: 0; overflow-x: hidden; }
+body {
+  font-family: var(--salas-font-sans, ui-sans-serif, system-ui, sans-serif);
+  color: var(--salas-text);
+  background-color: var(--salas-bg);
+}
+app-root {
+  display: block;
+  height: 100%;
+  min-height: 100vh;
+  font-family: var(--salas-font-sans, ui-sans-serif, system-ui, sans-serif);
+  color: var(--salas-text);
+}
+.salas-sidebar .salas-sidebar-content { min-height: 120px; }

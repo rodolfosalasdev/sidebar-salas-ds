@@ -1,0 +1,19 @@
+/* Header da área principal (dentro do inset) */
+.app-main-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.app-main-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--salas-text);
+}
+.app-main-content {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
